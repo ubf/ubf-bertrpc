@@ -1,0 +1,38 @@
+%%% -*- mode: erlang -*-
+%%%
+
++NAME("bertprc_server").
+
++VSN("bbf1.0").
+
++TYPES
+
+%% bertprc types
+%% @TODO Define BERT-RPC 1.0 types
+
+%% meta types
+keepalive_req()     = keepalive;
+keepalive_res()     = ok;
+
+info_req()          = info;
+info_res()          = string();
+
+description_req()   = description;
+description_res()   = string();
+
+contract_req()      = contract;
+contract_res()      = term().
+
++ANYSTATE
+
+%% bertrpc methods
+%% @TODO Define BERT-RPC 1.0 methods
+
+%% meta methods
+keepalive_req()     => keepalive_res();
+EVENT               => keepalive_req();
+EVENT               <= keepalive_req();
+
+info_req()          => info_res();
+description_req()   => description_res();
+contract_req()      => contract_res().

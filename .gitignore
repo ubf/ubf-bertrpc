@@ -1,0 +1,11 @@
+*.P
+*.beam
+*.boot
+*.d
+*.huc
+*.log
+*.script
+.bom_*
+.depends-*
+.deps/
+erl_crash.dump
