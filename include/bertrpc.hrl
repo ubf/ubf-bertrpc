@@ -2,8 +2,8 @@
 %%% Description: BERT-RPC Utilities
 %%%----------------------------------------------------------------------
 
--ifndef(bertprc).
--define(bertprc, true).
+-ifndef(bertrpc).
+-define(bertrpc, true).
 
 %%%-------------------------------------------------------------------
 %%% Macros
@@ -13,4 +13,4 @@
 %%% Records
 %%%-------------------------------------------------------------------
 
--endif. % -ifndef(bertprc)
+-endif. % -ifndef(bertrpc)

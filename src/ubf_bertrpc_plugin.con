@@ -1,13 +1,13 @@
 %%% -*- mode: erlang -*-
 %%%
 
-+NAME("bertprc_server").
++NAME("bertrpc_server").
 
 +VSN("bbf1.0").
 
 +TYPES
 
-%% bertprc types
+%% bertrpc types
 %% @TODO Define BERT-RPC 1.0 types
 
 %% meta types

@@ -10,7 +10,7 @@ do_eunit() ->
         _ -> erlang:halt(1)
     end.
 
--define(APPLICATION, bertprc_plugin).
+-define(APPLICATION, bertrpc_plugin).
 -define(BBF_PORT, server_port(test_bbf_tcp_port)).
 
 -define(SLEEP, 50).
@@ -47,7 +47,6 @@ all_actual_tests_(Host,Port) ->
              , ?_test(test_002(#args{host=Host,port=Port()}))
              , ?_test(test_003(#args{host=Host,port=Port()}))
              , ?_test(test_004(#args{host=Host,port=Port()}))
-             , ?_test(test_005(#args{host=Host,port=Port()}))
              %% @TODO Implement BERT-RPC 1.0 tests
             ]
     end.

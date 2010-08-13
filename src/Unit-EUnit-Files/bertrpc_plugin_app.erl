@@ -1,9 +1,9 @@
 %%%----------------------------------------------------------------------
-%%% File     : bertprc_plugin_app.erl
+%%% File     : bertrpc_plugin_app.erl
 %%% Purpose  : test UBF top-level application
 %%%----------------------------------------------------------------------
 
--module(bertprc_plugin_app).
+-module(bertrpc_plugin_app).
 
 -behaviour(application).
 
@@ -24,7 +24,7 @@ start() ->
     start(xxxwhocares, []).
 
 start(_Type, StartArgs) ->
-    case bertprc_plugin_sup:start_link(StartArgs) of
+    case bertrpc_plugin_sup:start_link(StartArgs) of
         {ok, Pid} ->
             {ok, Pid};
         Error ->

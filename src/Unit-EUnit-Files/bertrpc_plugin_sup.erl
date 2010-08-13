@@ -1,5 +1,5 @@
 %%%----------------------------------------------------------------------
-%%% File    : bertprc_plugin_sup.erl
+%%% File    : bertrpc_plugin_sup.erl
 %%% Purpose : test UBF top-level supervisor
 %%%----------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ init(Args) ->
 
     DefaultMaxConn = 10000,
     DefaultTimeout = 60000,
-    DefaultPlugins = proplists:get_value(plugins, Args, [ubf_bertprc_plugin]),
+    DefaultPlugins = proplists:get_value(plugins, Args, [ubf_bertrpc_plugin]),
 
     CBBF = case proplists:get_value(test_bbf_tcp_port, Args, 0) of
                undefined ->
@@ -50,8 +50,8 @@ init(Args) ->
                BBFPort ->
                    BBFMaxConn = proplists:get_value(test_bbf_maxconn, Args, DefaultMaxConn),
                    BBFIdleTimer = proplists:get_value(test_bbf_timeout, Args, DefaultTimeout),
-                   BBFOptions = [{statelessrpc,true}                %% mandatory for bertprc
-                                 , {startplugin,ubf_bertprc_plugin} %%          "
+                   BBFOptions = [{statelessrpc,true}                %% mandatory for bertrpc
+                                 , {startplugin,ubf_bertrpc_plugin} %%          "
                                  , {serverhello,undefined}          %%          "
                                  , {simplerpc,true}                 %%          "
                                  , {proto,ebf}                      %%          "

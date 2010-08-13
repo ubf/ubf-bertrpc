@@ -1,0 +1,3 @@
+{application,'ubf-bertrpc__HEAD'}.
+{packages,[]}.
+{modules,[ubf_bertrpc_plugin]}.

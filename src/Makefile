@@ -18,15 +18,15 @@
 ###----------------------------------------------------------------------
 
 MODULES = \
-	ubf_bertprc_plugin
+	ubf_bertrpc_plugin
 
 PLUGINS = \
-	ubf_bertprc_plugin
+	ubf_bertrpc_plugin
 
 EUNITTESTS = \
-	bertprc_plugin_app \
-	bertprc_plugin_sup \
-	bertprc_plugin_test
+	bertrpc_plugin_app \
+	bertrpc_plugin_sup \
+	bertrpc_plugin_test
 
 # include erl make
 include $(shell cat ../.depends-gmt-bom)/make/erl_make.mk
@@ -35,6 +35,6 @@ include $(shell cat ../.depends-gmt-bom)/make/erl_make.mk
 check: all
 	-rm -f ./*.log
 	$(RUNERL1) -noinput -noshell -pz $(EUNITTEST_DIR) \
-		-s bertprc_plugin_test do_eunit \
+		-s bertrpc_plugin_test do_eunit \
 		-s erlang halt \
 		> ./check.log

@@ -1,7 +1,7 @@
 %%% -*- mode: erlang -*-
 %%%
 
-{application, bertprc_plugin,
+{application, bertrpc_plugin,
  [
   {description, "BERTRPC_PLUGIN"},
   {vsn, "0.01"},
@@ -13,6 +13,6 @@
   {registered, [ ] },
   %% NOTE: do not list applications which are load-only!
   {applications, [ kernel, stdlib, sasl ] },
-  {mod, {bertprc_plugin_app, []} }
+  {mod, {bertrpc_plugin_app, []} }
  ]
 }.
