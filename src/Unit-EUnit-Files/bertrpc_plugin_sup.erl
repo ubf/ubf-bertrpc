@@ -44,29 +44,29 @@ init(Args) ->
     DefaultTimeout = 60000,
     DefaultPlugins = proplists:get_value(plugins, Args, [ubf_bertrpc_plugin]),
 
-    CBBF = case proplists:get_value(test_bbf_tcp_port, Args, 0) of
-               undefined ->
-                   [];
-               BBFPort ->
-                   BBFMaxConn = proplists:get_value(test_bbf_maxconn, Args, DefaultMaxConn),
-                   BBFIdleTimer = proplists:get_value(test_bbf_timeout, Args, DefaultTimeout),
-                   BBFOptions = [{statelessrpc,true}                %% mandatory for bertrpc
-                                 , {startplugin,ubf_bertrpc_plugin} %%          "
-                                 , {serverhello,undefined}          %%          "
-                                 , {simplerpc,true}                 %%          "
-                                 , {proto,ebf}                      %%          "
-                                 , {maxconn,BBFMaxConn}
-                                 , {idletimer,BBFIdleTimer}
-                                 , {registeredname,test_bbf_tcp_port}
-                                ],
-                   BBFServer =
-                       {bbf_server, {ubf_server, start_link, [test_bbf, DefaultPlugins, BBFPort, BBFOptions]},
-                        permanent, 2000, worker, [bbf_server]},
+    CBERT = case proplists:get_value(test_bert_tcp_port, Args, 0) of
+                undefined ->
+                    [];
+                BERTPort ->
+                    BERTMaxConn = proplists:get_value(test_bert_maxconn, Args, DefaultMaxConn),
+                    BERTIdleTimer = proplists:get_value(test_bert_timeout, Args, DefaultTimeout),
+                    BERTOptions = [{statelessrpc,true}                %% mandatory for bertrpc
+                                   , {startplugin,ubf_bertrpc_plugin} %%          "
+                                   , {serverhello,undefined}          %%          "
+                                   , {simplerpc,true}                 %%          "
+                                   , {proto,bert}                     %%          "
+                                   , {maxconn,BERTMaxConn}
+                                   , {idletimer,BERTIdleTimer}
+                                   , {registeredname,test_bert_tcp_port}
+                                  ],
+                    BERTServer =
+                        {bert_server, {ubf_server, start_link, [test_bert, DefaultPlugins, BERTPort, BERTOptions]},
+                         permanent, 2000, worker, [bert_server]},
 
-                   [BBFServer]
-           end,
+                    [BERTServer]
+            end,
 
-    {ok, {{one_for_one, 2, 60}, CBBF}}.
+    {ok, {{one_for_one, 2, 60}, CBERT}}.
 
 %%%----------------------------------------------------------------------
 %%% Internal functions

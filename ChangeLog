@@ -1,2 +1,6 @@
+2010-11-14 01:30 JST  norton
+        * copy ebf.erl and ebf_driver.erl and rename as bert.erl and
+          bert_driver.erl respectively.
+
 2010-08-14 01:00 JST  norton
         * inital import

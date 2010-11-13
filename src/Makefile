@@ -14,10 +14,12 @@
 ### limitations under the License.
 ###
 ### File    : Makefile
-### Purpose : 
+### Purpose :
 ###----------------------------------------------------------------------
 
 MODULES = \
+	bert \
+	bert_driver \
 	ubf_bertrpc_plugin
 
 PLUGINS = \

@@ -11,7 +11,7 @@ do_eunit() ->
     end.
 
 -define(APPLICATION, bertrpc_plugin).
--define(BBF_PORT, server_port(test_bbf_tcp_port)).
+-define(BERT_PORT, server_port(test_bert_tcp_port)).
 
 -define(SLEEP, 50).
 
@@ -39,7 +39,7 @@ all_tests_(Setup,Teardown) ->
     }.
 
 all_actual_tests_() ->
-    all_actual_tests_("localhost",fun() -> ?BBF_PORT end).
+    all_actual_tests_("localhost",fun() -> ?BERT_PORT end).
 
 all_actual_tests_(Host,Port) ->
     fun(_) ->
