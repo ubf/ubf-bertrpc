@@ -1,3 +1,7 @@
+2011-01-07 15:00 JST  norton
+	* Prepare for v0.1 tag: refactor UBF and friends to use repo and
+	rebar tools.
+
 2010-11-14 01:30 JST  norton
         * copy ebf.erl and ebf_driver.erl and rename as bert.erl and
           bert_driver.erl respectively.

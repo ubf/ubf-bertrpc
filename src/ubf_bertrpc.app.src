@@ -1,0 +1,14 @@
+%%% -*- mode: erlang -*-
+
+{application, ubf_bertrpc,
+ [
+  {description, "Universal Binary Format and Binary ERlang Term RPC"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel, stdlib, sasl]},
+  {modules, [bert_driver.erl
+             , bert.erl
+             , ubf_bertrpc_plugin.erl
+            ]},
+  {env, []}
+ ]}.

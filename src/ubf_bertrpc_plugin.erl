@@ -14,7 +14,7 @@
 -import(ubf_plugin_handler, [sendEvent/2, install_handler/2]).
 
 -compile({parse_transform,contract_parser}).
--add_contract("ubf_bertrpc_plugin").
+-add_contract("src/ubf_bertrpc_plugin").
 
 -include("ubf.hrl").
 -include("ubf_plugin_stateless.hrl").

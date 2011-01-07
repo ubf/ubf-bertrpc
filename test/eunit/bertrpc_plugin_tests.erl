@@ -1,4 +1,4 @@
--module(bertrpc_plugin_test).
+-module(bertrpc_plugin_tests).
 
 -compile(export_all).
 -include_lib("eunit/include/eunit.hrl").
