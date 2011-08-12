@@ -56,6 +56,7 @@ all_actual_tests_(Host,Port) ->
 %%%----------------------------------------------------------------------
 
 test_setup(App) ->
+    code:add_pathz("../test/eunit"),
     application:start(sasl),
     application:stop(App),
     ok = application:start(App),
