@@ -3,7 +3,7 @@
 {application, ubf_bertrpc,
  [
   {description, "Universal Binary Format and Binary ERlang Term RPC"},
-  {vsn, "0.1.2"},
+  {vsn, "0.1.3"},
   {registered, []},
   {applications, [kernel, stdlib, sasl]},
   {modules, [bert_driver.erl
