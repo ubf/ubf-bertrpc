@@ -1,13 +1,9 @@
 %% @doc Protocol driver process for BERT protocol sessions.
 %%
-%% This driver automagically relies on the OTP `gen_tcp' "packet"
+%% This driver automagically relies on the OTP +gen_tcp+ "packet"
 %% feature, using a 4-byte prefix to specify the size of the data
 %% coming from the client.  Similarly, this packet feature is used
 %% when sending our reply back to the client.
-%%
-%% The process executing `loop()' in this module is represented in the
-%% diagram below by the "UBF Driver" circle.
-%% <img src="../priv/doc/ubf-flow-01.png"></img>
 
 -module(bert_driver).
 -behaviour(contract_driver).
