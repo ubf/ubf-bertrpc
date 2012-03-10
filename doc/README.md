@@ -3,7 +3,7 @@
 #Universal Binary Format and Bert-RPC#
 
 
-Copyright (c) 2011 by Joseph Wayne Norton
+Copyright (c) 2011-2012 by Joseph Wayne Norton
 
 __Authors:__ Joseph Wayne Norton ([`norton@alum.mit.edu`](mailto:norton@alum.mit.edu)).<p>This is UBF-BERTRPC, a framework for integrating UBF, EBF, and
 Bert-RPC.  This repository depends on the UBF open source repository.</p>
