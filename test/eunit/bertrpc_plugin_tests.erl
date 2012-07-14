@@ -114,7 +114,7 @@ server_port(Name) ->
     end.
 
 client_connect(#args{host=Host,port=Port}) ->
-    Options = [{proto,ebf},{serverlessrpc,true},{serverhello,undefined},{simplerpc,true}],
+    Options = [{proto,ebf},{statelessrpc,true},{serverhello,undefined},{simplerpc,true}],
     {ok,Pid,undefined} = ubf_client:connect(Host,Port,Options,infinity),
     {ok,Pid}.
 
