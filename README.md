@@ -18,7 +18,7 @@ please follow this recipe:</p>
 
 <pre><tt>$ mkdir working-directory-name
 $ cd working-directory-name
-$ git clone git://github.com/ubf/ubf-bertrpc.git ubf_bertrpc
+$ git clone https://github.com/ubf/ubf-bertrpc.git ubf_bertrpc
 $ cd ubf_bertrpc
 $ ./rebar get-deps
 $ ./rebar clean
@@ -112,7 +112,7 @@ Create working directory
 
 <pre><tt>$ mkdir working-directory-name
 $ cd working-directory-name
-$ repo init -u git://github.com/ubf/manifests.git -m ubf-bertrpc-default.xml</tt></pre>
+$ repo init -u https://github.com/ubf/manifests.git -m ubf-bertrpc-default.xml</tt></pre>
 
 
 <table><tr>

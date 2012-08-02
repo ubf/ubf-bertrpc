@@ -16,8 +16,8 @@
 -compile({parse_transform,contract_parser}).
 -add_contract("src/ubf_bertrpc_plugin").
 
--include("ubf.hrl").
--include("ubf_plugin_stateless.hrl").
+-include_lib("ubf/include/ubf.hrl").
+-include_lib("ubf/include/ubf_plugin_stateless.hrl").
 
 info() ->
     "I am a BERT-RPC server".

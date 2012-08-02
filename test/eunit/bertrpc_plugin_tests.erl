@@ -2,7 +2,7 @@
 
 -compile(export_all).
 -include_lib("eunit/include/eunit.hrl").
--include("ubf.hrl").
+-include_lib("ubf/include/ubf.hrl").
 
 do_eunit() ->
     case eunit:test({timeout,120,?MODULE}) of
