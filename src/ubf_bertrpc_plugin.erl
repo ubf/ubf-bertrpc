@@ -9,6 +9,7 @@
 %% Required (except keepalive/0) callback API for UBF stateless
 %% implementations.
 -export([info/0, description/0, keepalive/0]).
+-export([moduleStart/1, moduleRestart/1]).
 -export([handlerStart/1, handlerStop/3, handlerRpc/1, handlerEvent/1]).
 
 -import(ubf_plugin_handler, [sendEvent/2, install_handler/2]).
@@ -27,6 +28,14 @@ description() ->
 
 keepalive() ->
     ok.
+
+%% @doc start module
+moduleStart(_Args) ->
+    unused.
+
+%% @doc restart module
+moduleRestart(Args) ->
+    moduleStart(Args).
 
 %% @doc start handler
 handlerStart(_Args) ->
