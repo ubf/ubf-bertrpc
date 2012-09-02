@@ -56,14 +56,14 @@ all_actual_tests_(Host,Port) ->
 %%%----------------------------------------------------------------------
 
 test_setup(App) ->
-    code:add_pathz("../test/eunit"),
-    application:start(sasl),
-    application:stop(App),
+    true = code:add_pathz("../test/eunit"),
+    _ = application:start(sasl),
+    _ = application:stop(App),
     ok = application:start(App),
     App.
 
 test_teardown(App) ->
-    application:stop(App),
+    _ = application:stop(App),
     ok.
 
 %% connect -> close
