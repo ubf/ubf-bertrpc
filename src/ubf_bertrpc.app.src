@@ -6,9 +6,9 @@
   {vsn, git},
   {registered, []},
   {applications, [kernel, stdlib, sasl]},
-  {modules, [bert_driver.erl
-             , bert.erl
-             , ubf_bertrpc_plugin.erl
+  {modules, [bert_driver
+             , bert
+             , ubf_bertrpc_pluginl
             ]},
   {env, []}
  ]}.
